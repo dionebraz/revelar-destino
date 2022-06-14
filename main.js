@@ -2,6 +2,8 @@ const answerContainer = document.querySelector("#answer-container");
 const questionInput = document.querySelector("#questionInput");
 const paragraphQuestion = document.querySelector("#paragraphQuestion");
 const headingAnswear = document.querySelector("#headingAnswer");
+const nameUser = document.querySelector('#nameUser')
+const getName = prompt('Olá, bem vindo(a)!\nDigite seu nome logo abaixo.')
 const answers = [
   "Certeza!",
   "Não tenho tanta certeza.",
@@ -33,11 +35,12 @@ function getQuestionAndShowAnswer() {
     return
   } else {
     questionInput.classList.remove('errorInput')
-    questionInput.placeholder = 'Digite sua pergunta...'
+    questionInput.placeholder = ' Digite sua pergunta...'
     questionInput.style.color = ''
     questionInput.style.backgroundColor = ''
   }
 
+  nameUser.innerHTML = getName
   paragraphQuestion.innerHTML = questionInput.value;
 
   const answerTotal = answers.length;
@@ -46,6 +49,8 @@ function getQuestionAndShowAnswer() {
   headingAnswear.innerHTML = answers[randomAnswer];
 
   questionInput.value = "";
+
+  nameUser.innerHTML = getName
   answerContainer.style.opacity = 1;
   answerContainer.style.display = "block";
   clearResult();
@@ -55,6 +60,7 @@ function getQuestionAndShowAnswer() {
 function clearResult() {
   setTimeout(() => {
     answerContainer.style.opacity = 0;
+    nameUser.style.opacity = 1
   }, 2500);
 }
 
