@@ -2,7 +2,6 @@ const answerContainer = document.querySelector("#answer-container");
 const questionInput = document.querySelector("#questionInput");
 const paragraphQuestion = document.querySelector("#paragraphQuestion");
 const headingAnswear = document.querySelector("#headingAnswer");
-const nameUser = document.querySelector('#nameUser')
 const getName = prompt('Olá, bem vindo(a)!\nDigite seu nome logo abaixo.')
 const answers = [
   "Certeza!",
@@ -40,7 +39,6 @@ function getQuestionAndShowAnswer() {
     questionInput.style.backgroundColor = ''
   }
 
-  nameUser.innerHTML = getName
   paragraphQuestion.innerHTML = questionInput.value;
 
   const answerTotal = answers.length;
@@ -50,7 +48,6 @@ function getQuestionAndShowAnswer() {
 
   questionInput.value = "";
 
-  nameUser.innerHTML = getName
   answerContainer.style.opacity = 1;
   answerContainer.style.display = "block";
   clearResult();
@@ -60,7 +57,6 @@ function getQuestionAndShowAnswer() {
 function clearResult() {
   setTimeout(() => {
     answerContainer.style.opacity = 0;
-    nameUser.style.opacity = 1
   }, 2500);
 }
 
