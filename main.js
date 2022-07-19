@@ -2,7 +2,6 @@ const answerContainer = document.querySelector("#answer-container");
 const questionInput = document.querySelector("#questionInput");
 const paragraphQuestion = document.querySelector("#paragraphQuestion");
 const headingAnswear = document.querySelector("#headingAnswer");
-const getName = prompt('Olá, bem vindo(a)!\nDigite seu nome logo abaixo.')
 const answers = [
   "Certeza!",
   "Não tenho tanta certeza.",
